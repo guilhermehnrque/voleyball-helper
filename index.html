@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.115.4">
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <title>Vôlei vulco vulco</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+</head>
+
+<body data-bs-theme-value="dark">
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+        <header class="d-flex align-items-center pb-3 mb-3 border-bottom">
+            <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+                <span class="fs-4">Sorteador</span>
+            </a>
+        </header>
+
+        <main>
+            <p class="fs-5 col-md-8">Criar equipes a partir de uma lista</p>
+            <form class="col-sm-6" id="players">
+                <div class="row pt-2">
+                    <div class="col-sm-12">
+                        <h6 class="d-flex justify-content-between align-items-center ">
+                            <label for="gameTitle" class="form-label">Título</label>
+                        </h6>
+
+                        <input type="text" class="form-control" id="gameTitle" placeholder="" value="Teste" required>
+                        <div class="invalid-feedback">
+                            Título é requerido
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-sm-12">
+                        <h6 class="d-flex justify-content-between align-items-center">
+                            <span class="">Nomes</span>
+                            <span class="badge rounded-pill" id="playersQuantityBadge">0</span>
+                        </h6>
+                        <textarea class="form-control" id="playersNameList" required rows="8">Guilherme 
+Kayc
+Podrini
+Ghabriel
+Yago
+Manel
+Yago2</textarea>
+                        <div class="invalid-feedback">
+                            Nomes para equipes é requerido
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="mb-5v">
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <button class="btn btn-dark" type="button" onclick="cleanInputsAndTableArea()">Limpar</button>
+                        <button class="btn btn-primary" type="submit">Sortear</button>
+                </div>
+            </form>
+            
+            <div class="pt-2 visually-hidden" id="tables-area">
+                <p class="fs-5 col-md-8">Equipes</p>
+                <div class="pt-2" id="tables-players">
+                    
+                </div>
+            </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/mustache/mustache.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
